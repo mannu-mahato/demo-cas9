@@ -3,7 +3,7 @@ name: Run on new files added
 on:
   push:
     paths:
-      - '.app/**'  # Update 'your-folder' to the folder you want to monitor
+      - '.app/**'  
     types:
       - added
 
