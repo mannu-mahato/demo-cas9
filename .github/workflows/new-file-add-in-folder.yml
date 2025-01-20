@@ -1,0 +1,21 @@
+name: Run on new files added
+
+on:
+  push:
+    paths:
+      - '.app/**'  # Update 'your-folder' to the folder you want to monitor
+    types:
+      - added
+
+jobs:
+  new-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: List new files
+        run: |
+          echo "New files added:"
+          git diff --name-only --diff-filter=A HEAD^ HEAD
