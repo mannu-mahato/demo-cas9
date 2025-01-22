@@ -3,7 +3,7 @@ name: Run on new files added
 on:
   push:
     paths:
-      - docs/*
+      - '**/doc/**'
     types:
       - added
 
