@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Notify about new files
-        run: echo
+        run: echo "file added"
