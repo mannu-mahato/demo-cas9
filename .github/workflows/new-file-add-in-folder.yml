@@ -1,21 +1,16 @@
-name: Run on new files added
+name: Run on New Files Added to Doc Folder
 
 on:
   push:
     paths:
-      - '**/doc/**'
-    types:
-      - added
+      - 'doc/**'
 
 jobs:
-  new-files:
+  check-new-files:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List new files
-        run: |
-          echo "New files added:"
-          git diff --name-only --diff-filter=A HEAD^ HEAD
+      - name: Notify about new files
+        run: echo
